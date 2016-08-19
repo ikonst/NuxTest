@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NuxTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitten" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-x0-ps5">
+                                <rect key="frame" x="33" y="28" width="1200" height="1200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T97-gD-49B">
+                                <rect key="frame" x="70" y="70" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-wg-sw7">
+                                <rect key="frame" x="80" y="60" width="70" height="70"/>
+                                <accessibility key="accessibilityConfiguration" identifier="maskView"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Kdm-HH-dQa"/>
+                                    <constraint firstAttribute="height" constant="70" id="qvq-UI-Ewi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUw-am-ZvZ">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufx-26-tRn" customClass="DimView" customModule="NuxTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zma-Wb-f2Q">
+                                        <rect key="frame" x="0.0" y="513" width="600" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zma-Wb-f2Q" firstAttribute="leading" secondItem="Ufx-26-tRn" secondAttribute="leading" id="5me-Zj-5CR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zma-Wb-f2Q" secondAttribute="bottom" constant="40" id="Fxi-pc-PUz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zma-Wb-f2Q" secondAttribute="trailing" id="gFf-na-Z8k"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="highlightViews" destination="nMI-wg-sw7" collectionClass="NSMutableArray" id="ua9-Rs-15g"/>
+                                    <outletCollection property="highlightViews" destination="AUw-am-ZvZ" collectionClass="NSMutableArray" id="ztu-XU-BWt"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ufx-26-tRn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="4yP-2e-qR5"/>
+                            <constraint firstItem="T97-gD-49B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Awh-Ld-Hli"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Ufx-26-tRn" secondAttribute="bottom" id="H1x-mf-XOw"/>
+                            <constraint firstItem="Ufx-26-tRn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YoQ-hJ-n3T"/>
+                            <constraint firstItem="qRc-x0-ps5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="aHx-bu-XMc"/>
+                            <constraint firstItem="qRc-x0-ps5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fZs-bS-cec"/>
+                            <constraint firstAttribute="trailing" secondItem="Ufx-26-tRn" secondAttribute="trailing" id="ozd-2u-hwP"/>
+                            <constraint firstItem="nMI-wg-sw7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="pGQ-qK-Rkp"/>
+                            <constraint firstItem="T97-gD-49B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="yWw-9J-0aL"/>
+                            <constraint firstItem="nMI-wg-sw7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="z6b-Wb-rOu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dimView" destination="Ufx-26-tRn" id="bKj-4K-Wl0"/>
+                        <outlet property="maskView" destination="nMI-wg-sw7" id="d1F-vE-vrs"/>
+                        <outlet property="widthConstraint" destination="Kdm-HH-dQa" id="DZ8-1u-5oz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="356"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kitten" width="1200" height="1200"/>
+    </resources>
+</document>
